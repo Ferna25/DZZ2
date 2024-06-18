@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nogometna Stranica</title>
+    <link rel="stylesheet" href="styles.css">
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: #575757;
+    border-radius: 5px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #575757;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    padding: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.gallery-container img {
+    width: 30%;
+    margin-bottom: 20px;
+    transition: transform 0.3s;
+}
+
+.gallery-container img:hover {  
+    animation: spin 4s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 800px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+    
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .gallery-container img {
+        width: 100%;
+    }
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Nogomet</div>
+            <ul class="nav-links">
+                <li><a href="#home">Početna</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropbtn">Više</a>
+                    <div class="dropdown-content">
+                        <a href="#news">Vijesti</a>
+                        <a href="#gallery">Galerija</a>
+                        <a href="https://www.linkedin.com/in/sini%C5%A1a-jov%C4%8Di%C4%87-b54abb4a/?originalSubdomain=hr">Kontakt</a>
+                    </div>
+                </li>
+            </ul>
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="news">
+            <h2>Vijesti</h2>
+            <p>Ivan Perišić u prvih 11 protiv Albanije, i to na mjestu lijevog beka. Iako smo nagovijestili da je moguće da se to dogodi, to bi ipak bilo poprilično iznenađenje budući da je izbornik Dalić naznačio da Perišić još nje spreman za 90 minuta.</p>
+            <p>Hoće li Dalić ući u taj rizik, teško je decidirano reći, ali naznake postoje. Stižu informacije da je Dalić isprobavao tu opciju na današnjem dijelu zatvorenog treninga. Ne mora nužno značiti da je odlučio Perišića staviti u udarnu postavu, možda još ništa nije odlučio, možda izbornik još razmišlja jer se utakmica igra tek sutra u 15 sati.</p>
+            <p>Moguće je da je Perišića samo isprobavao na lijevom boku za trenutak kada ga odluči ubaciti u igru. Sve su opcije otvorene, ali cure informacije da Dalić ozbiljno razmišlja gurnuti Perišića u vatru od prve minute.</p>
+            <p>Ako bi Perišić startao, to bi se moglo protumačiti kao znak da je voda došla do grla. Stavljati nespremnog igrača nje baš uputno, ali zna se koliko Perišić znači Vatrenima. Sigurno se sve radi u dogovoru sa samim igračem, Ivan najbolje zna koliko može u ovom trenutku.</p>
+        </section>
+        
+        <section id="gallery">
+            <h2>Galerija</h2>
+            <div class="gallery-container">
+                <img src="image1.jpg" alt="Slika 1">
+                <img src="image2.jpg" alt="Slika 2">
+                <img src="image3.jpg" alt="Slika 3">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
